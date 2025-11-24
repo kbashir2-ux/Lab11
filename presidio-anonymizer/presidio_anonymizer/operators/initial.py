@@ -15,13 +15,15 @@ class Initial(Operator):
         text = ' '.join(text.split())
         anonymized_text = []
         for word in text.split():
+                non_alpha_prefix = ''
                 while word and not word[0].isalnum():
+                    non_alpha_prefix += word[0]
                     word = word[1:]
 
                 if word.isalpha():
-                    anonymized_text.append(word[0].upper() + ".")
+                    anonymized_text.append(non_alpha_prefix + word[0].upper() + ".")
                 
                 else:
-                    anonymized_text.append(word)
+                    anonymized_text.append(non_alpha_prefix + word)
 
         return " ".join(anonymized_text)
