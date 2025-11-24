@@ -16,6 +16,7 @@ from presidio_anonymizer.operators import (
     OperatorType,
     Redact,
     Replace,
+    Initial
 )
 
 logger = logging.getLogger("presidio-anonymizer")
