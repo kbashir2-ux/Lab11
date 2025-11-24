@@ -22,6 +22,7 @@ except ImportError:
     AHDS_AVAILABLE = False
 
 from .operators_factory import OperatorsFactory  # isort:skip
+#from .initial import Initial
 
 __all__ = [
     "OperatorType",
