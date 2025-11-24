@@ -1,4 +1,4 @@
-#import pytest
+import pytest
 from presidio_anonymizer.operators.initial import Initial
 
 def test_correct_name():

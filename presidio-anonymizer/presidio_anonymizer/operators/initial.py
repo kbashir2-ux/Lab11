@@ -12,11 +12,16 @@ class Initial(Operator):
         pass
 
     def operate(self, text: str) -> str:
+        text = ' '.join(text.split())
         anonymized_text = []
         for word in text.split():
-            if word.isalpha():
-                anonymized_text.append(word[0].upper() + ".")
-            else:
-                anonymized_text.append(word)
+                while word and not word[0].isalnum():
+                    word = word[1:]
+
+                if word.isalpha():
+                    anonymized_text.append(word[0].upper() + ".")
+                
+                else:
+                    anonymized_text.append(word)
 
         return " ".join(anonymized_text)
