@@ -13,17 +13,18 @@ From the <module> sample.py (line 35),
 to the main method in sample.py (line 29), 
 to the run_anonymizer method in the sample.py (line 13)
 to the anonymize method in AnonymizerEngine Class (line 104)
-[complete the call stack here]
+to the create_operator_class in OperatorsFactory Class (line 133)
 ```
 
 * How many if/elif branches are used in selecting the operator?
-*Put your answer here*
+*None*
 
 * What data structure (a Python data type) exactly is used to select the operator?
-*Put your answer here*
+*The Dictionary*
 
 * Explain how "Strategy" design pattern is reflected here.
-
+*The Strategy design pattern is shown here because it's really easy to switch between the different anon strategies we've been working with. We don't need to use repetitive/messy if-else statements, instead choosing which strategy would work best for the given situation.* 
+*Because each strategy is its own class that depends on the Operator class, this means we can keep adding a ton more without needing to adjust what we already have.* 
 
 ---
 
