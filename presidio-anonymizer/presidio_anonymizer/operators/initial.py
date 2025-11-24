@@ -1,4 +1,4 @@
-from presidio_anonymizer.operators.operator import Operator
+from presidio_anonymizer.operators.operator import Operator, OperatorType
 import re
 
 class Initial(Operator):
@@ -7,6 +7,11 @@ class Initial(Operator):
     
     def operator_type(self):
         return "Anonymize"
+    
+    '''
+    def operator_type(self):
+    return OperatorType.Anonymize
+    '''
     
     def validate(self, params: dict):
         pass
